@@ -22,75 +22,13 @@
       align-items: center;
     }
 
-    /* .carrusel {
-      max-width: 500px;
-      overflow: hidden;
-    }
-
-    .contenedor-comentarios {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .contenedor-comentarios.active {
-      opacity: 1;
-    }
-
-    .contenedor-comentarios:not(.active) {
-      pointer-events: none;
-    }
-
-    .contenedor-comentarios.active~.controlador {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    .controlador {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 5px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-    }
-
-    .controlador span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin: 0 2px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-    }
-
-    .controlador span.active {
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .contenedor-comentarios {
-      margin: 15px;
-      max-width: 500px;
-      min-height: 100px;
-      background: white;
-      border-radius: 5px;
-      border: 1px solid rgb(222, 221, 221);
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      cursor: grab;
-    } */
-
     .carrusel {
       position: relative;
-      width: 500px; /* Ajusta el ancho del carrusel según tus necesidades */
-      height: 300px; /* Ajusta la altura del carrusel según tus necesidades */
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      border: 1px solid #d5d5d5;
+      border-radius: 5px;
       overflow: hidden;
     }
 
@@ -105,7 +43,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      cursor: pointer;
+      cursor: grab;
     }
 
     .contenedor-comentarios.active {
@@ -189,93 +127,106 @@
       font-family: Alexandria, sans-serif;
       color: rgb(40, 40, 40);
     }
+
+    @media only screen and (max-width: 600px) {
+      .carrusel {
+        max-width: 330px;
+        height: 440px;
+      }
+      .informacion-comentario{
+        max-width: 333px;
+      }
+      .testimonio {
+        width: 290px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <section class="carrusel">
     <div class="contenedor-comentarios active">
-        <div class="informacion-comentario">
-          <div class="imagen-nombre-nick">
-            <div class="columna1">
-              <img
-                src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
-                alt="miguelo">
-              <div class="columna2">
-                <strong>Miguelo</strong>
-                <p>@miguel</p>
-              </div>
-            </div>
-            <div class="redsocial">
-              <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
-                alt="logo de google">
+      <div class="informacion-comentario">
+        <div class="imagen-nombre-nick">
+          <div class="columna1">
+            <img
+              src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
+              alt="miguelo">
+            <div class="columna2">
+              <strong>Miguelo</strong>
+              <p>@miguel</p>
             </div>
           </div>
+          <div class="redsocial">
+            <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
+              alt="logo de google">
+          </div>
         </div>
-        <div class="testimonio-contenedor">
-          <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
-            itaque tempore.
-            Quod, distinctio perferendis reiciendis molestiae illo totam sint fugiat unde, nemo blanditiis vel temporibus.
-            Assumenda harum consequatur suscipit, rerum quod eius? Atque a enim perspiciatis, repellat alias totam quos
-            qui exercitationem rem facilis excepturi
-            debitis?jklasjdlkajsdlkasjd
-            jkasdjklasdj
-          </p>
-        </div>
+      </div>
+      <div class="testimonio-contenedor">
+        <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
+          itaque tempore.
+          Quod, distinctio perferendis reiciendis molestiae illo totam sint fugiat unde, nemo blanditiis vel temporibus.
+          Assumenda harum consequatur suscipit, rerum quod eius? Atque a enim perspiciatis, repellat alias totam quos
+          qui exercitationem rem facilis excepturi
+          debitis?jklasjdlkajsdlkasjd
+          jkasdjklasdj
+        </p>
+      </div>
     </div>
     <div class="contenedor-comentarios">
-        <div class="informacion-comentario">
-          <div class="imagen-nombre-nick">
-            <div class="columna1">
-              <img
-                src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
-                alt="miguelo">
-              <div class="columna2">
-                <strong>willi</strong>
-                <p>@willi</p>
-              </div>
-            </div>
-            <div class="redsocial">
-              <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
-                alt="logo de google">
+      <div class="informacion-comentario">
+        <div class="imagen-nombre-nick">
+          <div class="columna1">
+            <img
+              src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
+              alt="miguelo">
+            <div class="columna2">
+              <strong>willi</strong>
+              <p>@willi</p>
             </div>
           </div>
+          <div class="redsocial">
+            <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
+              alt="logo de google">
+          </div>
         </div>
-        <div class="testimonio-contenedor">
-          <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
-            itaque tempore.
-            Quod, distinctio perferendis reiciendis molestiae illo tota
-          </p>
-        </div>
+      </div>
+      <div class="testimonio-contenedor">
+        <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
+          itaque tempore.
+          Quod, distinctio perferendis reiciendis molestiae illo tota
+        </p>
+      </div>
     </div>
     <div class="contenedor-comentarios">
-        <div class="informacion-comentario">
-          <div class="imagen-nombre-nick">
-            <div class="columna1">
-              <img
-                src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
-                alt="miguelo">
-              <div class="columna2">
-                <strong>LaPOCHI</strong>
-                <p>@lapochitodojunto</p>
-              </div>
-            </div>
-            <div class="redsocial">
-              <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
-                alt="logo de google">
+      <div class="informacion-comentario">
+        <div class="imagen-nombre-nick">
+          <div class="columna1">
+            <img
+              src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
+              alt="miguelo">
+            <div class="columna2">
+              <strong>LaPOCHI</strong>
+              <p>@lapochitodojunto</p>
             </div>
           </div>
+          <div class="redsocial">
+            <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
+              alt="logo de google">
+          </div>
         </div>
-        <div class="testimonio-contenedor">
-          <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
-            itaque tempore.
-            Quod, distinctio perferendis reiciendis molestiae illo totam sint fugiat unde, nemo blanditiis vel temporibus.
-            Assumenda harum consequatur suscipit, rerum quod eius? Atque a enim perspiciatis, repellat alias totam quos
-            qui exercitationem rem facilis excepturi
-            debitis?jklasjdlkajsdlkasjd
-            jkasdjklasdj
-          </p>
-        </div>
+      </div>
+      <div class="testimonio-contenedor">
+        <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id
+          itaque tempore.
+          Quod, distinctio perferendis reiciendis molestiae illo totam sint fugiat unde, nemo blanditiis vel temporibus.
+          Assumenda harum consequatur suscipit, rerum quod eius? Atque a enim perspiciatis, repellat alias totam quos
+          qui exercitationem rem facilis excepturi
+          debitis?jklasjdlkajsdlkasjd
+          jkasdjklasdj
+        </p>
+      </div>
     </div>
     <div class="controlador">
       <span class="active"></span>
