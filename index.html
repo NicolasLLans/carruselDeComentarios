@@ -10,11 +10,11 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing:content-box;
+      box-sizing: content-box;
     }
 
     html,
-    body{
+    body {
       height: 100vh;
       width: 100%;
       display: flex;
@@ -22,18 +22,72 @@
       align-items: center;
     }
 
-    .contenedor-comentarios{
-      width: 100%;
+    .contenedor-comentarios {
+      margin: 15px;
+      max-width: 500px;
       min-height: 100px;
       background: white;
       border-radius: 5px;
-      border: 1px solid gray;
-      padding: 20px;
+      border: 1px solid rgb(222, 221, 221);
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      cursor:pointer;
     }
 
+    .informacion-comentario{
+      max-width: 500px;
+    }
+    
+
+    .imagen-nombre-nick{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.415);
+      padding: 20px;
+      max-width: 500px;
+    }
+
+    .columna1 {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .columna2{
+      font-family: Alexandria, sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      color: gray;
+      font-size: small;
+    }
+
+    img{
+      height: 50px;
+    }
+
+    strong{
+      color: rgb(19, 19, 19);
+      font-weight: 700;
+    }
+
+    .testimonio-contenedor{
+      width: inherit;
+      min-height: 100px;
+      height: fit-content;
+      padding: 20px;
+    }
+    .testimonio{
+      width:inherit;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: Alexandria, sans-serif;
+      color: rgb(40, 40, 40);
+    }
   </style>
 </head>
 
@@ -42,14 +96,27 @@
     <div class="contenedor-comentarios">
       <div class="informacion-comentario">
         <div class="imagen-nombre-nick">
-
-        </div>
-        <div class="red-social">
-
+          <div class="columna1">
+            <img
+              src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
+              alt="miguelo">
+            <div class="columna2">
+              <strong>Miguelo</strong>
+              <p>@miguel</p>
+            </div>
+          </div>
+          <div class="redsocial">
+            <i>google</i>
+          </div>
         </div>
       </div>
-      <div class="testimonio">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, ab!</p>
+      <div class="testimonio-contenedor">
+        <p class="testimonio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste. Eius obcaecati id itaque tempore.
+          Quod, distinctio perferendis reiciendis molestiae illo totam sint fugiat unde, nemo blanditiis vel temporibus.
+          Assumenda harum consequatur suscipit, rerum quod eius? Atque a enim perspiciatis, repellat alias totam quos
+          qui exercitationem rem facilis excepturi
+          debitis?
+        </p>
       </div>
     </div>
   </section>
