@@ -7,68 +7,138 @@
   <title>Testimonios</title>
   <!-- Agregar enlace al archivo CSS de Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+  <style>
+    .carousel-control-next,
+    .carousel-control-prev {
+      background-color: transparent !important;
+    }
+
+    .carousel-control-next:hover {
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .carousel-control-prev:hover {
+      background-color: transparent !important;
+      border: 0px solid white !important;
+    }
+
+    .carousel-control-next:active {
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .carousel-control-prev:active {
+      background-color: transparent !important;
+      border: 0px solid white !important;
+    }
+
+    .foto-perfil {
+      width: 40px;
+      width: 40px;
+    }
+
+    .carousel {
+      overflow: hidden;
+    }
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-item {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+
+    .carousel-inner {
+      position: relative;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .carousel-item-prev.carousel-item-end {
+      opacity: 1;
+    }
+
+    .carousel-item.active:not(.carousel-item-start):not(.carousel-item-end) {
+      opacity: 1;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      z-index: 1;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container py-5">
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+    <div id="carouselExample" class="carousel slide carousel-fade m-2" data-bs-ride="carousel">
+      <div class="carousel-inner  bg-light card md-5">
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="imagen1.jpg" alt="Imagen de Usuario" class="rounded-circle">
+          <div class="row card-header p-3">
+            <div class="col-md-2">
+              <img
+                src="https://lh3.googleusercontent.com/a-/ACB-R5T8NsBABQ2zm92NtnkW6XN7big0jOCJHojyHUbZ=w60-h60-p-rp-mo-br100"
+                alt="Imagen de Usuario" class="rounded-circle img-fluid foto-perfil">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-10">
               <div class="row">
                 <div class="col-md-8">
                   <h5>Nombre de Usuario</h5>
                   <p class="mb-0">@usuario123</p>
                 </div>
-                <div class="col-md-4">
-                  <span>Hace 2 horas</span>
-                  <span>Ubicación</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere purus
-                    euismod, sagittis nisi id, auctor risus.</p>
+                <div class="col-md-4 text-end">
+                  <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
+                    alt="logo de google" class="rounded-circle img-fluid foto-perfil">
                 </div>
               </div>
             </div>
           </div>
+          <div class="row p-3">
+            <div class="col">
+              <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere purus
+                euismod, sagittis nisi id, auctor risus.</p>
+            </div>
+          </div>
         </div>
         <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100" alt="Imagen de Usuario" class="rounded-circle">
+          <div class="row card-header p-3">
+            <div class="col-md-2">
+              <img
+                src="https://lh3.googleusercontent.com/a-/ACB-R5TttqW-IoqJtE4ZKKx-NVXBcwiOtEfHY9vZIegj=w60-h60-p-rp-mo-br100"
+                alt="Imagen de Usuario" class="rounded-circle img-fluid foto-perfil">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-10">
               <div class="row">
                 <div class="col-md-8">
                   <h5>Nombre de Usuario</h5>
                   <p class="mb-0">@usuario456</p>
                 </div>
-                <div class="col-md-4">
-                  <span>Hace 4 horas</span>
-                  <span>Ubicación</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <p class="mt-3">Nullam pulvinar sapien vel ex blandit, sed auctor augue fringilla. Integer
-                    laoreet justo a neque tempor aliquet.</p>
+                <div class="col-md-4 text-end">
+                  <img src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-logo-png.png"
+                    alt="logo de google" class="rounded-circle img-fluid foto-perfil">
                 </div>
               </div>
             </div>
           </div>
+          <div class="row p-3">
+            <div class="col">
+              <p class="mt-3">Nullam pulvinar sapien vel ex blandit, sed auctor augue fringilla. Integer
+                laoreet justo a neque tempor aliquet.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <button class="carousel-control-prev d-flex justify-content-start" type="button" data-bs-target="#carouselExample"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <button class="carousel-control-next d-flex justify-content-end" type="button" data-bs-target="#carouselExample"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Siguiente</span>
       </button>
@@ -79,4 +149,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
